@@ -29,7 +29,11 @@ sudo systemctl restart docker
 
 #### docker命令
 
-
+```
+进入正在运行的容器并以命令行交互：docker exec -it 容器ID /bin/bash
+重新进入：docker attach 容器ID
+推出容器：1、exit容器停止退出；2、ctrl+P+Q容器不停止退出
+```
 
 
 
@@ -48,6 +52,6 @@ docker run -p 12345:3306 --name mysql -v /zzyyuse/mysql/conf:/etc/mysql/conf.d -
 -d mysql:5.6 : 后台程序运行mysql5.6
 
 
-docker exec -it MySQL运行成功后的容器ID     /bin/bash
+docker exec -it MySQL运行成功后的容器ID /bin/bash
 ```
 
