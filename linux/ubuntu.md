@@ -1,3 +1,9 @@
+#### 切换root用户
+
+su root命令
+
+
+
 #### 开启open-ssh
 
 安装完成之后，如果你直接连接[Ubuntu](http://www.linuxidc.com/topicnews.aspx?tid=2)主机会发现连接不上，这是因为Ubuntu主机没有开启SSH服务，需要开启openssh-server：
@@ -22,23 +28,7 @@ root@ubuntu:~# /etc/init.d/ssh start
 
 
 
-#### 镜像
-
-ubuntu16.04下载地址：
-　中科大源 
-      http://mirrors.ustc.edu.cn/ubuntu-releases/16.04/
-　阿里云开源镜像站 
-      http://mirrors.aliyun.com/ubuntu-releases/16.04/
-　兰州大学开源镜像站 
-      http://mirror.lzu.edu.cn/ubuntu-releases/16.04/
-　北京理工大学开源
-      http://mirror.bit.edu.cn/ubuntu-releases/16.04/
-　浙江大学 
-      http://mirrors.zju.edu.cn/ubuntu-releases/16.04/
-
-
-
-#### 下载源
+#### 配置阿里下载源
 
 1、原文件备份
 
@@ -48,7 +38,7 @@ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
 sudo vim /etc/apt/sources.list
 
-3、将原来的列表删除，添加如下内容（中科大镜像源）
+3、将原来的列表删除，添加如下内容（阿里镜像源）
 
 ```
 deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse  

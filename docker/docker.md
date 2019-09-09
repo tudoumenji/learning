@@ -32,7 +32,8 @@ sudo systemctl restart docker
 ```
 进入正在运行的容器并以命令行交互：docker exec -it 容器ID /bin/bash
 重新进入：docker attach 容器ID
-推出容器：1、exit容器停止退出；2、ctrl+P+Q容器不停止退出
+退出容器：1、exit容器停止退出；2、ctrl+P+Q容器不停止退出
+查看容器详细信息：docker inspect container_id
 ```
 
 
