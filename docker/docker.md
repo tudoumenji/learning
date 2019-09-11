@@ -54,5 +54,9 @@ docker run -p 12345:3306 --name mysql -v /zzyyuse/mysql/conf:/etc/mysql/conf.d -
 
 
 docker exec -it MySQL运行成功后的容器ID /bin/bash
+
+开启远程访问权限
+grant all privileges on *.* to 'root'@'%' identified by '123456' with grant option;
+flush privileges;
 ```
 
