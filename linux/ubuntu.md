@@ -1,14 +1,16 @@
 #### 安装事项
 
-1、选择镜像（安装时会下载部分必须软件和更新，从官方给的地址下载太慢）
+1、选择ubuntu server LTS版本（长期支持版本）
+
+2、选择镜像（安装时会下载部分必须软件和更新，从官方给的地址下载太慢）
 
 ```
 163镜像： http://mirrors.163.com/ubuntu/
 ```
 
-2、安装时注意选择安装open-ssh（忘了装，可以看下面）
+3、安装时注意选择安装open-ssh（忘了装，可以看下面）
 
-#### 切换root用户
+#### 切换root用户（docker操作需要root权限）
 
 su root命令
 
@@ -22,7 +24,7 @@ su root命令
 
 
 
-#### 开启open-ssh（ssh连不上时请选择）
+#### 开启open-ssh（ssh连不上时请选择，注意重启）
 
 安装完成之后，如果你直接连接[Ubuntu](http://www.linuxidc.com/topicnews.aspx?tid=2)主机会发现连接不上，这是因为Ubuntu主机没有开启SSH服务，需要开启openssh-server：
 
@@ -46,7 +48,7 @@ root@ubuntu:~# /etc/init.d/ssh start
 
 
 
-#### 配置阿里下载源
+#### 配置阿里下载源（注意：上面选择镜像了，就不要再设置这里了，要不然会导致未知原因的慢下载！！！！）
 
 1、原文件备份
 

@@ -31,7 +31,7 @@ sudo systemctl restart docker
 
 ```
 进入正在运行的容器并以命令行交互：docker exec -it 容器ID /bin/bash
-重新进入：docker attach 容器ID
+重新进入：docker attach 容器ID（这个命令好像有问题）
 退出容器：1、exit容器停止退出；2、ctrl+P+Q容器不停止退出
 查看容器详细信息：docker inspect container_id
 ```
@@ -54,6 +54,8 @@ docker run -p 12345:3306 --name mysql -v /zzyyuse/mysql/conf:/etc/mysql/conf.d -
 
 
 docker exec -it MySQL运行成功后的容器ID /bin/bash
+
+注意：查看 mysql.user表，一般会有user：host => root:%,则说明root用户已对外开启远程访问权限，直接开启navicat连接吧！
 
 开启远程访问权限
 grant all privileges on *.* to 'root'@'%' identified by '123456' with grant option;
