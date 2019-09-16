@@ -1,3 +1,7 @@
+注：以下操作一般无问题，不行1、重启docker(命令sudo service docker restart)；2、重启服务器！！（ubuntu命令:reboot）
+
+注：挂起ubuntu服务器后，docker里容器出现外部不能连接的情况，请重启docker
+
 #### Docker镜像加速
 
 通过修改daemon配置文件/etc/docker/daemon.json来使用加速器（阿里云申请）
@@ -34,6 +38,13 @@ sudo systemctl restart docker
 重新进入：docker attach 容器ID（这个命令好像有问题）
 退出容器：1、exit容器停止退出；2、ctrl+P+Q容器不停止退出
 查看容器详细信息：docker inspect container_id
+docker pull mysql 拉取镜像
+docker images 查看镜像
+docker ps 查看所有运行的容器
+docker ps -a 查看所有容器，包括未运行的
+docker start 容器id 运行容器
+docker stop 容器id 停止容器
+docker restart 容器id 重启容器
 ```
 
 
@@ -57,8 +68,27 @@ docker exec -it MySQL运行成功后的容器ID /bin/bash
 
 注意：查看 mysql.user表，一般会有user：host => root:%,则说明root用户已对外开启远程访问权限，直接开启navicat连接吧！
 
-开启远程访问权限
+（默认已开启）开启远程访问权限
 grant all privileges on *.* to 'root'@'%' identified by '123456' with grant option;
 flush privileges;
+```
+
+
+
+redis
+
+```
+简单开启
+$ docker run --name redis容器名字 -p 6379:6379 -d redis
+
+简单开启并持久化
+$ docker run --name redis容器名字 -p 6379:6379 -d redis redis-server --appendonly yes
+持久化数据在/data里
+
+进入容器,并用redis-cli打开测试
+$ docker exec -it redis运行成功后的容器ID /bin/bash
+$ redis-cli
+
+用外部redis desktop manager测试
 ```
 
