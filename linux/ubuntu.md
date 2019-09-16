@@ -1,3 +1,5 @@
+（可参照<http://www.piis.cn/zhishi/web1424.asp>）
+
 #### 安装事项
 
 1、选择ubuntu server LTS版本（长期支持版本）
