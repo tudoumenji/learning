@@ -1,3 +1,7 @@
+#### 激活码
+
+http://idea.medeming.com/jetbrains/
+
 #### 设置(尽量在welcome页面设置，对所有新建项目生效)
 
 - edit custom VM Options：（使用 IDEA 自带菜单中的 Help -> Edit Custom VM Options，直接修改配置文件可能无效）-Xms1024m || -Xmx2048m || -XX:ReservedCodeCacheSize=960m
@@ -61,7 +65,7 @@ https://juejin.im/post/5a90810b6fb9a063606eefe0
 
 - Alt + Shift   智能修正错误
 - Ctrl + Space   补全代码，一般默认自动补全
-- Ctrl + Shift + Space   智能补全，在写函数接口和lamda表达式时特别好用
+- Ctrl + Alt + Space   智能补全，在写函数接口和lamda表达式时特别好用
 - Ctrl + P  方法参数列表
 - Alt + Insert   生成与类相关的代码，例如生成构造方法、getter and setter、copyright
 - Ctrl + O  该类中所有可以覆盖或者实现的方法列表
