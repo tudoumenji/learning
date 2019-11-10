@@ -54,8 +54,9 @@ http://idea.lanyus.com
 - Lombok
 - Translation
 - Vue.js
-
-
+- checkstyle
+- findbugs
+- alibaba p3c
 
 
 
