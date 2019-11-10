@@ -1,6 +1,7 @@
 #### 激活码
 
-http://idea.medeming.com/jetbrains/
+http://idea.medeming.com/jetbrains/ 
+
 http://idea.lanyus.com
 
 #### 设置(尽量在welcome页面设置，对所有新建项目生效)
