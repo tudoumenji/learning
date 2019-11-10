@@ -1,6 +1,7 @@
 #### 激活码
 
 http://idea.medeming.com/jetbrains/
+http://idea.lanyus.com
 
 #### 设置(尽量在welcome页面设置，对所有新建项目生效)
 
@@ -113,7 +114,6 @@ https://juejin.im/post/5a90810b6fb9a063606eefe0
 - Ctrl + 鼠标左键   跳转到当前光标所在的类定义或者接口
 - Ctrl + Alt + 鼠标左键   跳转到已实现此接口或继承的类
 - F11    添加为书签或者从书签中删除。添加 Favorites 面板：View -> Tool Windows -> Favorites
-
 
 
 
