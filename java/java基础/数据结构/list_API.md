@@ -59,6 +59,7 @@ public class ListAPITest01 {
 
         //6 使用集合转数组的方法，必须使用集合的toArray(T[] array)，
         // 传入的是类型完全一致、长度为0的空数组(数组长度为0时，动态创建与size相同的数组，性能最好)。
+        // Arrays.asList()返回的是视图
         Student[] list6ToArray = list6.toArray(new Student[0]);
         System.out.println("list6ToArray:" + Arrays.toString(list6ToArray));
 
