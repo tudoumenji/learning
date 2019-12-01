@@ -1,23 +1,45 @@
-# [Mybatis 中的转义字符](https://www.cnblogs.com/dato/p/7028723.html)
+# Mybatis特殊字符转义
 
- 记录以下mybatis中的转义字符，方便以后自己看一下
+2018-11-01 16:08:54 [jacksonjj](https://me.csdn.net/userlhj) 阅读数 2031 收藏
 
-| \&lt;   | <    | 小于   |
-| ------- | ---- | ------ |
-| \&gt;   | >    | 大于   |
-| \&amp;  | &    | 与     |
-| \&apos; | '    | 单引号 |
-| \&quot; | "    | 双引号 |
-| =       | =    | =      |
+<![CDATA[ ]]>
 
-需要注意的是分号是必不可少的。 比如 a > b 我们就写成  a &gt; b
+XML文件会在解析XML时将5种特殊字符进行转义，分别是&， <， >， “， ‘， 我们不希望语法被转义，就需要进行特别处理。
+有两种解决方法：其一，使用**<![CDATA[ ]]>**标签来包含字符。其二，使用XML转义序列来表示这些字符。
 
- 
-
-当然啦， 我们也可以用另外一种，就是<![CDATA[ ]]>符号。 在mybatis中这种符号将不会解析。 比如
-
-```
-<![CDATA[ when min(starttime)<='12:00' and max(endtime)<='12:00' ]]>    
+```sql
+<select id="userInfo" parameterType="java.util.HashMap" resultMap="user">   
+     SELECT id,newTitle, newsDay FROM newsTable WHERE 1=1  
+     AND  newsday <![CDATA[>=]]> #{startTime}
+     AND newsday <![CDATA[<= ]]>#{endTime}  
+  ]]>  
+ </select>
 ```
 
- 
+在CDATA内部的所有内容都会被解析器忽略，保持原貌。所以在Mybatis配置文件中，要尽量缩小 <![CDATA[ ]]>的作用范围，来避免 等sql标签无法解析的问题。
+
+**使用XML转义序列**
+5种特殊字符的转义序列
+
+```
+特殊字符     转义序列
+<           &lt;
+>           &gt;
+&           &amp;
+"           &quot;
+'           &apos;
+=						=
+```
+
+上述sql也可以写成如下：
+
+```sql
+<select id="userInfo" parameterType="java.util.HashMap" resultMap="user">   
+     SELECT id,newTitle, newsDay FROM newsTable WHERE 1=1  
+     AND  newsday &gt; #{startTime}
+     AND  newsday &gt; #{endTime}  
+ </select>  
+12345
+```
+
+## 推荐使用<![CDATA[ ]]>，清晰，简洁
