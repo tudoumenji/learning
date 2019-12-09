@@ -45,6 +45,7 @@ docker ps -a 查看所有容器，包括未运行的
 docker start 容器id 运行容器
 docker stop 容器id 停止容器
 docker restart 容器id 重启容器
+docker rm 容器id 移除容器
 ```
 
 
