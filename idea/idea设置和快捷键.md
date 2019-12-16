@@ -40,6 +40,8 @@ http://idea.lanyus.com
 
 - (可选)  Diagram -> java class diagram  勾选需要的选项，生成对应的UML类图
 
+- 取消导包合并成* ->code style ->java ->imports ->class count to use import with * :500  和 names count to use static import with * :500 
+
 
 
 #### 其他
