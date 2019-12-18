@@ -1,0 +1,15 @@
+﻿alt+enter  提示
+ctrl+D     复制一行
+ctrl+Y     删除一行
+ctrl+O     重写方法
+
+ctrl+shift+enter    快捷补全分号
+ctrl+shift+上下箭头
+ctrl+alt+l   格式化代码
+
+alt+insertif 按回车
+
+abc
+    abc.for 遍历数组，回车 
+sout=syso
+    
