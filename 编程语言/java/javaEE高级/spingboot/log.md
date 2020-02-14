@@ -117,3 +117,5 @@ There are several choices available:
 
 
 By default, the topic (or name) of the logger will be the class name of the class annotated with the `@Log` annotation. This can be customised by specifying the `topic` parameter. For example: `@XSlf4j(topic="reporting")`.
+
+logback的使用和logback.xml详解https://www.cnblogs.com/warking/p/5710303.html
