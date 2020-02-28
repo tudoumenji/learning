@@ -1,2 +1,2 @@
-bin/flume-ng agent --conf conf/ --name a2 --conf-file job/loadbalance_conf/collectserver_a2_port4141.conf
-bin/flume-ng agent --conf conf/ --name a1 --conf-file job/loadbalance_conf/logserver_a1.conf 
+先启动：bin/flume-ng agent --conf conf/ --name a2 --conf-file job/loadbalance_conf/collectserver_a2_port4141.conf
+最后启动：bin/flume-ng agent --conf conf/ --name a1 --conf-file job/loadbalance_conf/logserver_a1.conf 
