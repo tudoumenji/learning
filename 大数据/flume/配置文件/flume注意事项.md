@@ -4,4 +4,4 @@
 
 3、注意batchsize要小于transactionCapacity，否则报错
 
-4、如果出现outofmemory错误，在conf/将内存占用调为1000-2000
+4、如果出现outofmemory错误，在conf/flume-env.sh将内存占用调为1000-2000
