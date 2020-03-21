@@ -3,3 +3,5 @@
 2、注意对接hdfs是否开启了kerberos认证，需要配置keytab和krb5
 
 3、注意batchsize要小于transactionCapacity，否则报错
+
+4、如果出现outofmemory错误，在conf/将内存占用调为1000-2000
