@@ -1,23 +1,3 @@
-package com.huawei.testbot.aitest.customize;
-
-
-import com.google.common.collect.Lists;
-import com.huawei.testbot.aitest.rules.SourceRules;
-import org.apache.flume.Context;
-import org.apache.flume.Event;
-import org.apache.flume.annotations.InterfaceAudience;
-import org.apache.flume.annotations.InterfaceStability;
-import org.apache.flume.event.EventBuilder;
-import org.apache.flume.serialization.EventDeserializer;
-import org.apache.flume.serialization.ResettableInputStream;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.List;
-
 /**
  * 自定义的行解析器，参考LineDeserializer，请注意代码改造部分
  */
