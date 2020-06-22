@@ -15,3 +15,7 @@ https://blog.csdn.net/captian_900331/article/details/87367190
 
 
 lsof -i：端口号     查找pid
+
+ps -ef | grep 过滤的内容
+
+jps
