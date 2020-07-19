@@ -1,8 +1,6 @@
 mongo配置
 
 ```java
-package com.huawei.testnow.config;
-
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
@@ -120,8 +118,6 @@ public class MongoTemplateConfig extends AbstractMongoConfiguration {
 
 
 ```java
-package com.huawei.testnow.controller;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.gridfs.GridFSDBFile;
 import io.swagger.annotations.Api;
