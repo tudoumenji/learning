@@ -2,6 +2,10 @@ https://blog.csdn.net/zhige_me/article/details/80699784
 
 
 
+https://blog.csdn.net/u010002184/article/details/85253900
+
+
+
 ```xml
 		<dependency>
 			<groupId>org.mapstruct</groupId>
