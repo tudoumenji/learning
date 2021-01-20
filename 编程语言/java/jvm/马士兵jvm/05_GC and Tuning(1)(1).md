@@ -138,6 +138,10 @@ https://zhuanlan.zhihu.com/p/35182584
 
 ### 常见垃圾回收器组合参数设定：(1.8)
 
+java -XX:+PrintCommandLineFlags  命令参数值（可查看使用的什么垃圾收集器）
+
+
+
 * -XX:+UseSerialGC = Serial New (DefNew) + Serial Old
   * 小型程序。默认情况下不会是这种选项，HotSpot会根据计算及配置和JDK版本自动选择收集器
 * -XX:+UseParNewGC = ParNew + SerialOld
